@@ -5,6 +5,7 @@ import time
 import requests
 import json
 import argparse
+import os
 
 parser = argparse.ArgumentParser(
         description='Git Secrets alerts'
@@ -18,7 +19,7 @@ parser.add_argument(
     )
 args = parser.parse_args()
 
-access_token = ""
+access_token = os.getenv('access_token') //export the github access token
 g = Github(access_token)
 Headers = {'Authorization': 'token {}'.format(access_token),
            'Accept': 'application/vnd.github.v3+json'
