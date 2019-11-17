@@ -33,4 +33,4 @@ export access_token=deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please also consider contributing the dorks that can reveal potentially sensitive information in github.
+Please also consider contributing the dorks (githubtestdork.txt) that can reveal potentially sensitive information in github.
