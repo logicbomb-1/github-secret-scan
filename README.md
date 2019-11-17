@@ -33,7 +33,7 @@ export access_token=deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
+Please also consider contributing the dorks that can reveal potentially sensitive information in github.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
