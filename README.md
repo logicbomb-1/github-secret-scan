@@ -1,6 +1,6 @@
 # github-secret-scan
 
-github-secret-scan is a Python tool to help find potentially sensitive files pushed to public or private repositories on Github.
+github-secret-scan is a Python tool to help find potentially sensitive files pushed to public or private repositories on Github. This can be used
 
 ## Installation
 
