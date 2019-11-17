@@ -10,10 +10,14 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 pip install requirements.txt
 ```
 
+## Options
+--orgname
+    To specify the organization repository name. 
+
 ## Usage
 
 ```python
-python gss.py -/-/orgname [name of the organisation]
+python gss.py --orgname [name of the organisation]
 
 ```
 
