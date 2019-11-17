@@ -18,7 +18,7 @@ pip install requirements.txt
 
 ## Usage
 
-```python
+```bash
 python gss.py --orgname [name of the organisation]
 
 ```
