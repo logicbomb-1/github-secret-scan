@@ -20,7 +20,8 @@ python gss.py -/-/orgname [name of the organisation]
 ## Github access token
 github-secret-scan will need a Github access token in order to interact with the Github API. Create a personal access token and save it in an environment variable in your .bashrc or similar shell configuration file:
 
-```export access_token=deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
+```
+export access_token=deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
 ```
 
 ## Contributing
