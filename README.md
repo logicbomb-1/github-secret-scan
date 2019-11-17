@@ -18,6 +18,7 @@ pip install requirements.txt
 
 ## Usage
 
+Clone this repository and run:
 ```bash
 python gss.py --orgname [name of the organisation]
 
