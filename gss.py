@@ -188,7 +188,7 @@ def get_user_secret(URL, i, item):
 def secret_scan_in_user_repo():
     with open('githubtestdork.txt') as f:
         for i in f:
-            for item in range(0, 5):
+            for item in range(0, len(user_repo_list)):
                 URL = "https://api.github.com/search/code?q={}+repo:{}&page=".format(i.strip(), user_repo_list[item])
                 queue_user.put((URL, i, item))
             queue_user.join()
@@ -232,14 +232,15 @@ def get_org_secret(URL, i, item):
 def secret_scan_in_org_repo():
     with open('githubtestdork.txt') as f:
         for i in f:
-            for item in range(0, 5):
+            for item in range(0, len(org_repo_list)):
                 URL = "https://api.github.com/search/code?q={}+repo:{}&page=".format(i.strip(), org_repo_list[item])
                 queue_org.put((URL, i, item))
             queue_org.join()
 
 
 if __name__ == '__main__':
-    for x in range(40):
+    thread_count = 40    
+    for x in range(thread_count):
         t = threading.Thread(target=threader)
         t.daemon = True
         t.start()
