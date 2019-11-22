@@ -21,8 +21,8 @@ parser.add_argument(
     )
 args = parser.parse_args()
 
-access_token = os.getenv('access_token')
-g = Github(access_token)
+github_access_token = os.getenv('github_access_token')
+g = Github(github_access_token)
 Headers = {'Authorization': 'token {}'.format(access_token),
            'Accept': 'application/vnd.github.v3+json'
         }
@@ -117,22 +117,7 @@ def user_repo():
             except Exception as e:
                 print e
     print user_repo_list
-#    for repo1 in collab_list:
-#        URL = "https://api.github.com/users/"+repo1+"/"+"repos?type=all"+"&page="
-#        page = 1
-#        while True:
-#            full_url = URL+str(page)
-#            print full_url
-#            page +=1
-#            try:
-#                req = requests.get(full_url, headers=Headers)
-#                repos = json.loads(req.text)
-#                if len(repos) == 0:
-#                    break
-#                for repo in repos:
-#                    user_repo_list.append(repo['full_name'])
-#            except Exception as e:
-#                print e
+
     for repo1 in search_user_list:
         URL = "https://api.github.com/users/"+repo1+"/"+"repos?type=all"+"&page="
         page = 1
