@@ -99,7 +99,7 @@ def collab_user():
     print list(set(collab_list))
 
 
-def user_repo():
+def get_user_repo_list():
     for repo1 in org_mem_list:
         URL = "https://api.github.com/users/"+repo1+"/"+"repos?type=all"+"&page="
         page = 1
@@ -247,7 +247,7 @@ if __name__ == '__main__':
     t1 = threading.Thread(target=member_list, name='t1')
     # t2 = threading.Thread(target=search_user, name='t2')
     t3 = threading.Thread(target=get_org_repos, name='t3')
-    t4 = threading.Thread(target=user_repo, name='t4')
+    t4 = threading.Thread(target=get_user_repo_list, name='t4')
     t5 = threading.Thread(target=secret_scan_in_org_repo, name='t4')
     t6 = threading.Thread(target=secret_scan_in_user_repo, name='t6')
     t3.start()
